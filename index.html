@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renave</title>
+    <title>Renave - Soluções Navais Inovadoras</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -25,117 +25,63 @@
         }
         
         header {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('header-image.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/header-image.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             color: #fff;
             text-align: center;
-            padding: 8em 0;
+            padding: 4em 1em;
             position: relative;
         }
         
-        header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 50px;
-            background: linear-gradient(to top, var(--secondary-color), transparent);
-        }
-        
         header h1 {
-            font-size: 4.5em;
+            font-size: 2.5em;
             margin: 0;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
             letter-spacing: 2px;
         }
         
         header p {
-            font-size: 1.3em;
+            font-size: 1.1em;
             max-width: 800px;
             margin: 1em auto;
             font-weight: 300;
         }
         
-        nav {
-            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
-            padding: 1em;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-        
-        nav a {
-            color: #fff;
-            margin: 0 1em;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            padding: 0.5em 1em;
-            border-radius: 20px;
-        }
-        
-        nav a:hover {
-            background-color: rgba(255,255,255,0.2);
-            color: var(--accent-color);
-        }
-        
         section {
-            padding: 5em 2em;
-            margin: 3em auto;
-            max-width: 1100px;
+            padding: 3em 1.5em;
+            margin: 2em 1em;
             background-color: #fff;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
         
         h2 {
             color: var(--primary-color);
-            border-bottom: 3px solid var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
             padding-bottom: 0.5em;
             margin-bottom: 1em;
-            font-size: 2.5em;
+            font-size: 1.8em;
         }
         
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5em;
+        .highlight {
+            color: var(--primary-color);
+            font-weight: bold;
         }
         
         .project-card {
             background-color: var(--secondary-color);
-            border-radius: 12px;
+            border-radius: 8px;
             overflow: hidden;
-            transition: all 0.3s ease;
+            margin-bottom: 2em;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
         
         .project-image {
             width: 100%;
-            height: 250px;
+            height: 300px;
             object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-        
-        .project-card:hover .project-image {
-            transform: scale(1.05);
+            object-position: center;
         }
         
         .project-info {
@@ -147,146 +93,190 @@
             color: var(--primary-color);
         }
         
-        .highlight {
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2.5em;
-        }
-        
         .contact-info, .location, .central {
             background-color: var(--secondary-color);
             padding: 1.5em;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 1.5em;
         }
         
         footer {
             background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
             color: #fff;
             text-align: center;
-            padding: 3em 0;
+            padding: 2em 1em;
         }
         
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 3em;
-            }
-            
-            header p {
-                font-size: 1.1em;
-                padding: 0 1em;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            nav a {
-                margin: 0.5em 0;
-                display: block;
-                width: 100%;
-                text-align: center;
-            }
-            
-            section {
-                padding: 3em 1.5em;
-                margin: 2em 1em;
-            }
-            
-            h2 {
-                font-size: 2em;
-            }
-            
-            .project-grid, .contact-grid {
-                grid-template-columns: 1fr;
-            }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .logo {
+            max-width: 200px;
+            margin-bottom: 1em;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 40%;
+            height: 0;
+            overflow: hidden;
+            max-width: 80%;
+            margin: 1em auto;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .map-container {
+            position: relative;
+            padding-bottom: 50%;
+            height: 0;
+            overflow: hidden;
+            max-width: 80%;
+            margin: 1em auto;
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .certification-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2em;
+            margin-top: 2em;
+        }
+
+        .certification-logo {
+            max-width: 100px;
+            height: auto;
+        }
+
+        .banner {
+            width: 100%;
+            height: 500px;
+            background-image: url('images/terminal-novo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            margin-bottom: 2em;
+        }
+
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner-text {
+            color: #fff;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Renave</h1>
-    <p>Inovar para atingir novos horizontes como uma alternativa de peso e com alta relevância no apoio offshore no Rio de Janeiro.</p>
+    <img src="images/logo.png" alt="Logo Renave" class="logo">
+    <p>Inovação e excelência em soluções navais para o Rio de Janeiro e além.</p>
 </header>
 
-<nav>
-    <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#areas">Áreas de Atuação</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#conformidades">Conformidades</a></li>
-        <li><a href="#contato">Fale Conosco</a></li>
-    </ul>
-</nav>
+<div class="banner">
+    <div class="banner-overlay">
+        <div class="banner-text">Bem-vindo ao Estaleiro Renave</div>
+    </div>
+</div>
 
 <section id="sobre">
-    <h2>Sobre</h2>
-    <p>A <span class="highlight">Renave</span> é uma empresa líder em soluções navais, oferecendo serviços de reparo, manutenção e apoio logístico para embarcações de todos os tipos. Com uma rica história de inovação e excelência, estamos comprometidos em fornecer serviços de alta qualidade para nossos clientes.</p>
+    <h2>Sobre Nós</h2>
+    <p>A <span class="highlight">Renave</span> é líder em soluções navais inovadoras. Oferecemos serviços de reparo, manutenção e apoio logístico de alta qualidade para embarcações de todos os portes. Nossa missão é impulsionar o setor naval com tecnologia de ponta e compromisso com a excelência.</p>
 </section>
 
 <section id="areas">
-    <h2>Áreas de Atuação</h2>
-    <h3>Reparos</h3>
-    <p>Oferecemos serviços completos de reparo, docagem e manutenção naval, garantindo que sua embarcação esteja sempre em perfeitas condições.</p>
-    <h3>Lay Up</h3>
-    <p>Disponibilizamos infraestrutura completa para o recebimento de embarcações em “lay up”, com todo o apoio portuário necessário para uma estadia segura.</p>
-    <h3>Apoio Logístico</h3>
-    <p>Nosso apoio logístico é projetado para atender às necessidades específicas de cada cliente, garantindo eficiência e segurança em todas as operações.</p>
+    <h2>Nossos Serviços</h2>
+    <h3>Reparos Navais</h3>
+    <p>Serviços completos de reparo e manutenção, garantindo a operacionalidade e segurança de sua frota.</p>
+    <h3>Lay Up Especializado</h3>
+    <p>Infraestrutura de ponta para receber embarcações em "lay up", com apoio portuário completo.</p>
+    <h3>Logística Naval</h3>
+    <p>Soluções logísticas personalizadas, otimizando suas operações marítimas com eficiência e segurança.</p>
 </section>
 
 <section id="projetos">
-    <h2>Projetos Realizados</h2>
-    <div class="project-grid">
-        <div class="project-card">
-            <img src="romulo-almeida.jpg" alt="Rômulo Almeida" class="project-image">
-            <div class="project-info">
-                <h3>Rômulo Almeida</h3>
-                <p><strong>Data:</strong> 31 de maio de 2023</p>
-                <p>O NT Rômulo Almeida é um navio tanque construído para transportar produtos claros derivados do petróleo, como gasolina e diesel. Com 182,88m de comprimento, ele representa um marco em nossa capacidade de construção naval.</p>
+    <h2>Projetos em Destaque</h2>
+    <div class="project-card">
+        <img src="images/romulo-almeida.jpg" alt="Navio Tanque Rômulo Almeida" class="project-image">
+        <div class="project-info">
+            <h3>NT Rômulo Almeida</h3>
+            <p><strong>Concluído em:</strong> 31 de maio de 2023</p>
+            <p>Um marco em nossa expertise: navio tanque de 182,88m para transporte de derivados de petróleo, demonstrando nossa capacidade em construções navais de grande porte.</p>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fMSAamZtz8E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
-        <!-- Repita a estrutura acima para os outros projetos -->
     </div>
 </section>
 
 <section id="conformidades">
-    <h2>Conformidades</h2>
-    <p>Estamos em conformidade com os mais altos padrões da indústria, incluindo certificações como <span class="highlight">logo-aws_1-80</span> e <span class="highlight">logo-rb_1-80</span>, garantindo a qualidade e segurança de nossos serviços.</p>
+    <h2>Certificações</h2>
+    <p>Comprometidos com a excelência, mantemos as certificações <span class="highlight">AWS</span> e <span class="highlight">RB</span>, garantindo os mais altos padrões de qualidade e segurança em todos os nossos serviços.</p>
+    <div class="certification-logos">
+        <img src="images/antaq-logo.png" alt="Logo ANTAQ" class="certification-logo">
+        <img src="images/aws-logo.png" alt="Logo AWS" class="certification-logo">
+        <img src="images/rb-logo.png" alt="Logo RB" class="certification-logo">
+    </div>
 </section>
 
 <section id="contato">
-    <h2>Fale Conosco</h2>
-    <div class="contact-grid">
-        <div class="contact-info">
-            <h3>Informações de Contato</h3>
-            <p><strong>Telefone:</strong> +55 (21) 2199-8015</p>
-            <p><strong>Email:</strong><br>
-            rh@renave.ind.br<br>
-            comercial@renave.ind.br<br>
-            contato@renave.ind.br</p>
+    <h2>Entre em Contato</h2>
+    <div class="contact-info">
+        <h3>Fale Conosco</h3>
+        <p><strong>Tel:</strong> +55 (21) 2199-8015</p>
+        <p><strong>E-mail:</strong><br>
+        comercial@renave.ind.br<br>
+        contato@renave.ind.br</p>
+    </div>
+    <div class="location">
+        <h3>Onde Estamos</h3>
+        <p>Ilha do Vianna, s/n – Barreto<br>
+        Acesso: Av. Gov. Roberto Silveira 674, Barreto – Niterói – RJ</p>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7352.790673457096!2d-43.10746!3d-22.86185!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99836ff2ab42cb%3A0x6b74ff8b3d6e7cb7!2sAv.%20Gov.%20Roberto%20Silveira%2C%20674%20-%20Barreto%2C%20Niter%C3%B3i%20-%20RJ%2C%2024110-206!5e0!3m2!1sen!2sbr!4v1729216909909!5m2!1sen!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div class="location">
-            <h3>Localização</h3>
-            <p>Ilha do Vianna, s/n – Barreto</p>
-            <p>Acesso pela Av. Gov. Roberto Silveira 674, Barreto – Niterói – RJ</p>
-        </div>
-        <div class="central">
-            <h3>Central de Atendimento</h3>
-            <p><strong>Telefone:</strong> +55 (21) 2199-8020</p>
-        </div>
+    </div>
+    <div class="central">
+        <h3>Atendimento</h3>
+        <p><strong>Central:</strong> +55 (21) 2199-8020</p>
     </div>
 </section>
 
 <footer>
     <p>&copy; 2023 Renave. Todos os direitos reservados.</p>
-    <p><a href="#" style="color: #fff; text-decoration: none;">Políticas de Segurança</a> | <a href="#" style="color: #fff; text-decoration: none;">Código de Conduta</a></p>
+    <p><a href="#">Políticas de Segurança</a> | <a href="#">Código de Conduta</a></p>
 </footer>
 
 </body>
